@@ -38,22 +38,19 @@ export class SlideshowComponent implements OnInit {
       title: 'Snowy Mountains',
     },
   ];
-  slideIndex = 0;
+  currentSlide = 0;
   nextSlide() {
-    console.log(this.slideIndex);
-    return this.slideIndex < this.slides.length - 1
-      ? this.slideIndex++
-      : (this.slideIndex = 0);
+    return this.currentSlide < this.slides.length - 1
+      ? this.currentSlide++
+      : (this.currentSlide = 0);
   }
   prevSlide() {
-    console.log(this.slideIndex);
-    return this.slideIndex === 0
-      ? (this.slideIndex = this.slides.length - 1)
-      : this.slideIndex--;
+    return this.currentSlide === 0
+      ? (this.currentSlide = this.slides.length - 1)
+      : this.currentSlide--;
   }
   changeSlide(index: number) {
-    this.slideIndex = index;
-    console.log(this.slideIndex);
+    this.currentSlide = index;
   }
   constructor() {}
 
