@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="mySlides" *ngFor="let slide of slides; index as i">
+    <ng-container *ngIf="slideIndex === i">
+      <div class="numbertext">{{ i + 1 }} / {{ slides.length }}</div>
+      <img [src]="slide.wideImage" style="width: 100%;" />
+    </ng-container>
+  </div>
+
+  <a (click)="prevSlide()" class="prev">❮</a>
+  <a (click)="nextSlide()" class="next">❯</a>
+
+  <div class="caption-container">
+    <p id="caption">{{ slides[this.slideIndex].title }}</p>
+  </div>
+
+  <div class="row">
+    <div class="column" *ngFor="let slide of slides; index as i">
+      <img
+        [src]="slide.image"
+        class="demo cursor"
+        style="width: 100%;"
+        (click)="slideIndex = i"
+        [ngClass]="{ active: slideIndex === i }"
+      />
+    </div>
+  </div>
+</div>

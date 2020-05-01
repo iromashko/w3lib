@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoreComponent } from './more/more.component';
 import { GridViewComponent } from './grid-view/grid-view.component';
+import { SlideshowComponent } from './slideshow/slideshow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoreComponent,
-    GridViewComponent
+    GridViewComponent,
+    SlideshowComponent
   ],
   imports: [
     BrowserModule,
