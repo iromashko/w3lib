@@ -1,36 +1,29 @@
-<div class="relative shadow-2">
+<div class="relative shadow-2 hide-child">
   <div class="mySlides" *ngFor="let slide of slides; index as i">
     <ng-container *ngIf="currentSlide === i">
-      <div class="white absolute pv3 ph3 f5">
-        {{ i + 1 }} / {{ slides.length }}
-      </div>
       <img [src]="slide.wideImage" class="v-mid" />
     </ng-container>
   </div>
 
-  <a
-    (click)="prevSlide()"
-    class="bg-animate hover-bg-black-30 br3 br--right pointer absolute white b f3 nt6 pa3"
-    >❮</a
-  >
-  <a
-    (click)="nextSlide()"
-    class="bg-animate hover-bg-black-30 br3 br--left pointer absolute white b f3 right-0 nt6 pa3"
-    >❯</a
-  >
+  <div class="child">
+    <div class="white absolute pv3 ph3 f5">
+      {{ currentSlide + 1 }} / {{ slides.length }}
+    </div>
+    <div
+      class="tc bg-dark-gray white pv1 absolute w-100 top-0 right-0 o-40 fw6 avenir b"
+    >
+      <p>{{ slides[this.currentSlide].title }}</p>
+    </div>
 
-  <div class="tc bg-dark-gray white pv1 fw6 avenir b">
-    <p>{{ slides[this.currentSlide].title }}</p>
-  </div>
-
-  <div class="flex">
-    <div class="content-between" *ngFor="let slide of slides; index as i">
-      <img
-        [src]="slide.image"
-        class="li v-mid"
-        (mouseover)="currentSlide = i"
-        [ngClass]="currentSlide === i ? 'o-100' : 'o-50'"
-      />
+    <div class="flex absolute bottom-0">
+      <div class="content-between" *ngFor="let slide of slides; index as i">
+        <img
+          [src]="slide.image"
+          class="li v-mid"
+          (mouseover)="currentSlide = i"
+          [ngClass]="currentSlide === i ? 'o-100' : 'o-50'"
+        />
+      </div>
     </div>
   </div>
 </div>
