@@ -1,36 +1,36 @@
-<div id="btnContainer">
+<div>
   <button
     class="link pa3 dim bn outline-0"
-    [ngClass]="{ 'bg-gray': activeLayout === 'list' }"
+    [ngClass]="{ 'bg-gray white': activeLayout === 'list' }"
     (click)="changeLayout('list')"
   >
     <i class="fa fa-bars"></i> List
   </button>
   <button
     class="link pa3 dim bn outline-0"
-    [ngClass]="{ 'bg-gray': activeLayout === 'grid' }"
+    [ngClass]="{ 'bg-gray white': activeLayout === 'grid' }"
     (click)="changeLayout('grid')"
   >
     <i class="fa fa-th-large"></i> Grid
   </button>
 </div>
 <br />
-<div class="row cf">
-  <div class="column fl pa1 bg-mid-gray" [ngClass]="getWidth()">
+<div>
+  <div class="fl pa1 bg-mid-gray" [ngClass]="getWidth()">
     <h2>Column 1</h2>
     <p>Some text...</p>
   </div>
-  <div class="column fl pa1 bg-gray" [ngClass]="getWidth()">
+  <div class="fl pa1 bg-gray" [ngClass]="getWidth()">
     <h2>Column 2</h2>
     <p>Some text...</p>
   </div>
 </div>
-<div class="row">
-  <div class="column fl pa1 bg-gray" [ngClass]="getWidth()">
+<div>
+  <div class="fl pa1 bg-gray" [ngClass]="getWidth()">
     <h2>Column 3</h2>
     <p>Some text...</p>
   </div>
-  <div class="column fl pa1 bg-mid-gray" [ngClass]="getWidth()">
+  <div class="fl pa1 bg-mid-gray" [ngClass]="getWidth()">
     <h2>Column 4</h2>
     <p>Some text...</p>
   </div>
