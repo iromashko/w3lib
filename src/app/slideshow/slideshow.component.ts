@@ -28,7 +28,7 @@ export class SlideshowComponent implements OnInit {
       title: 'Northern Lights',
     },
     {
-      image: '../../assets/img/img_woods.jpg',
+      image: '../../assets/img/img_nature.jpg',
       wideImage: '../../assets/img/img_nature_wide.jpg',
       title: 'Nature and sunrise',
     },
