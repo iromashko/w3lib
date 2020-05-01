@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MoreComponent } from './more/more.component';
+import { GridViewComponent } from './grid-view/grid-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MoreComponent,
+    GridViewComponent
   ],
   imports: [
     BrowserModule,

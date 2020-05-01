@@ -1,0 +1,19 @@
+<p class="center mw6 ba br3 pa3 b--black-10 mv4 f3">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime laborum
+  praesentium libero magnam? Aut, sunt doloribus reiciendis possimus, officia
+  perferendis voluptatum ab quas nulla eos debitis sequi illum minima magnam!
+
+  <span *ngIf="!open">...</span>
+
+  <span *ngIf="open">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et temporibus
+    repellat autem beatae a accusantium earum, facere, eveniet quia nisi
+    sapiente voluptatem quam aliquam provident! Quisquam officia facilis
+    excepturi voluptatibus!
+  </span>
+  <button
+    class="bg-orange pa3 f3 white b br3"
+    (click)="open = !open"
+    [innerText]="getButtonName()"
+  ></button>
+</p>
