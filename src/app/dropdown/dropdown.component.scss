@@ -1,0 +1,26 @@
+.dropdown {
+  &__content {
+    display: none;
+  }
+
+  &:hover &__content {
+    display: block;
+  }
+
+  &__content {
+    padding-top: 4px;
+    left: 0;
+    top: 100%;
+    background-color: beige;
+    z-index: 9999;
+    width: 200px;
+    height: 200px;
+  }
+  &__button {
+    width: 200px;
+    padding: 12px;
+    background-color: white;
+    color: black;
+    outline: none;
+  }
+}
